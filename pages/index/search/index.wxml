@@ -1,0 +1,14 @@
+<!--pages/index/search/index.wxml-->
+<t-navbar fixed="true" t-class-placeholder="t-navbar-placeholder" t-class-content="t-navbar-content">
+  <view slot="left">
+    <t-image
+      t-class="custom-image"
+      src="/pages/index/logo.png"
+      aria-label="导航栏图片"
+    />
+  </view>
+</t-navbar>
+<view class="search">
+  <t-search placeholder="请输入您的旅游地点~" shape="round"/>
+</view>
+<text>当前页面正在开发中</text>

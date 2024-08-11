@@ -1,0 +1,15 @@
+/* pages/index/search/index.wxss */
+page {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.custom-image {
+  height: 45px;
+  width: 123px;
+}
+
+.search {
+  padding: 16rpx 32rpx;
+}
