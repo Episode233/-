@@ -1,0 +1,7 @@
+<!--pages/index/search/route/index.wxml-->
+
+<text>名称：{{item.name}}</text>
+<text>终点：{{item.destination}}</text>
+<text>图片链接：{{item.images[0]}}</text>
+<text>日程安排：{{item.itinerary}}</text>
+<text>对应酒店id：{{item.hotel_id}}</text>

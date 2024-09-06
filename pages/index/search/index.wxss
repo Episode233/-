@@ -13,3 +13,8 @@ page {
 .search {
   padding: 16rpx 32rpx;
 }
+
+.block {
+  display: block;
+  margin-bottom: 32rpx;
+}

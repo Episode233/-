@@ -6,7 +6,57 @@ Page({
    * 页面的初始数据
    */
   data: {
+    value: '',
+    resultList: [],
+    border: {
+      color: 'var(--td-border-level-1-color, #E7E7E7)',
+    },
+  },
 
+  onChangeValue(e) {
+    const { value } = e.detail;
+    if (value) {
+      // 发送GET请求，获取动态数据
+      wx.request({
+        url: `https://api.episode.ink/route/?destination=${value}`, // 动态传递 value
+        method: 'GET',
+        data: {
+          query: value
+        },
+        success: (res) => {
+          // 假设返回的数据格式为 { data: ['tdesign-vue', 'tdesign-react', ...] }
+          const list = res.data; 
+  
+          this.setData({
+            value,
+            resultList: list.map(item => item)
+          });
+        },
+        fail: (err) => {
+          console.error('请求失败', err);
+          this.setData({
+            resultList: [] // 请求失败时清空列表
+          });
+        }
+      });
+    } else {
+      this.setData({
+        value: '',
+        resultList: []
+      });
+    }
+  },
+
+  handleItemClick(e) {
+    const item = e.currentTarget.dataset.item;
+    
+    // 将数据存储到本地缓存
+    wx.setStorageSync('currentItem', item);
+    
+    // 跳转到目标页面
+    wx.navigateTo({
+      url: '/pages/index/search/route/index'
+    });
   },
 
   /**

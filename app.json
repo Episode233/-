@@ -1,7 +1,8 @@
 {
   "pages": [
     "pages/index/index",
-    "pages/index/search/index"
+    "pages/index/search/index",
+    "pages/index/search/route/index"
   ],
   "window": {
     "navigationBarTextStyle": "black",
