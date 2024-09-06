@@ -12,13 +12,16 @@
   <t-search placeholder="请输入您的旅游地点~" shape="round" bind:change="onChangeValue"/>
 </view>
 <view class="block">
-  <t-grid column="{{1}}" align="left" wx:for="{{resultList}}" wx:key="index">
-    <t-grid-item 
-    text="{{item.name}}" 
-    description="目的地：{{item.destination}}" 
-    layout="horizontal" 
-    image="{{item.images[0]}}" 
-    bind:click="handleItemClick"
-    data-item="{{item}}" />
-  </t-grid>
+  <view wx:for="{{resultList}}" wx:key="index">
+    <t-cell
+      title="{{item.name}}"
+      description="目的地：{{item.destination}}"
+      align="top"
+      image="{{item.images[0]}}"
+      hover
+      bordered="{{true}}"
+      bind:click="handleItemClick"
+      data-item="{{item}}"
+    />
+  </view>
 </view>

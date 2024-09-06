@@ -1,7 +1,40 @@
 <!--pages/index/search/route/index.wxml-->
+<t-navbar fixed="true" t-class-placeholder="t-navbar-placeholder" t-class-content="t-navbar-content">
+  <view slot="left">
+    <t-image
+      t-class="custom-image"
+      src="/pages/index/logo.png"
+      aria-label="导航栏图片"
+    />
+  </view>
+</t-navbar>
+<t-swiper
+  height="400"
+  current="{{current}}"
+  autoplay="{{autoplay}}"
+  duration="{{duration}}"
+  interval="{{interval}}"
+  list="{{swiperList}}"
+  navigation="{{ { type: 'dots-bar' } }}"
+/>
 
-<text>名称：{{item.name}}</text>
-<text>终点：{{item.destination}}</text>
-<text>图片链接：{{item.images[0]}}</text>
-<text>日程安排：{{item.itinerary}}</text>
-<text>对应酒店id：{{item.hotel_id}}</text>
+<t-cell-group theme="card">
+  <t-cell title="{{item.name}}" leftIcon="flight-takeoff" hover />
+  <t-cell title="目的地：{{item.destination}}" leftIcon="location-1" hover />
+  <t-cell title="查看酒店详情" leftIcon="sailing-hotel" hover arrow />
+  <t-cell title="日程安排：总计{{item.itinerary.length}}天" leftIcon="filter-2" hover arrow bind:tap="handleCellPopup"/>
+  <t-popup
+    visible="{{visible}}"
+    usingCustomNavbar
+    bind:visible-change="onVisibleChange"
+    placement="bottom"  
+  >
+    <view class="block block--bottom popup-content">
+      <view class="popup-item" wx:for="{{popupText}}" wx:key="index">
+        <text class="day-number">第{{index + 1}}天：</text>
+        <text class="day-detail">{{item}}</text>
+      </view>
+    </view>
+  </t-popup>
+  <t-cell title="机构：北京瀚竺科技有限公司" leftIcon="service" hover />
+</t-cell-group>
