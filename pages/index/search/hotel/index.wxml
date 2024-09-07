@@ -28,7 +28,7 @@
     placement="bottom"  
   >
     <view class="block block--bottom popup-content">
-      233
+      {{hotel.description}}
     </view>
   </t-popup>
 </t-cell-group>
