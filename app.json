@@ -2,7 +2,8 @@
   "pages": [
     "pages/index/index",
     "pages/index/search/index",
-    "pages/index/search/route/index"
+    "pages/index/search/route/index",
+    "pages/index/search/hotel/index"
   ],
   "window": {
     "navigationBarTextStyle": "black",

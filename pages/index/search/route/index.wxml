@@ -8,6 +8,7 @@
     />
   </view>
 </t-navbar>
+
 <t-swiper
   height="400"
   current="{{current}}"
@@ -21,7 +22,7 @@
 <t-cell-group theme="card">
   <t-cell title="{{item.name}}" leftIcon="flight-takeoff" hover />
   <t-cell title="目的地：{{item.destination}}" leftIcon="location-1" hover />
-  <t-cell title="查看酒店详情" leftIcon="sailing-hotel" hover arrow />
+  <t-cell title="查看酒店详情" leftIcon="sailing-hotel" hover arrow bind:click="goToHotelDetails"/>
   <t-cell title="日程安排：总计{{item.itinerary.length}}天" leftIcon="filter-2" hover arrow bind:tap="handleCellPopup"/>
   <t-popup
     visible="{{visible}}"

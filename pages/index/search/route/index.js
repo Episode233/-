@@ -19,35 +19,16 @@ Page({
     popupText: '',    // 弹出层显示的内容
   },
 
-  /**
-   * 生命周期函数--监听页面加载
-   */
-  onLoad(options) {
-    const currentItem = wx.getStorageSync('currentItem');
-    
-    if (currentItem) {
+    updateSwiperList() {
+      const swiperList = this.data.item.images.map((image, index) => ({
+        value: image,
+        ariaLabel: `图片${index + 1}`, // Label based on index
+      }));
+
       this.setData({
-        item:currentItem
-      }, () => {
-        // After setting item, generate swiperList
-        this.updateSwiperList();
+        swiperList
       });
-    }
-
-    console.log(this.data.item);
-  },
-
-  updateSwiperList() {
-    const swiperList = this.data.item.images.map((image, index) => ({
-      value: image,
-      ariaLabel: `图片${index + 1}`, // Label based on index
-    }));
-
-    this.setData({
-      swiperList
-    });
-  },
-
+    },
   
     // 控制单元格点击后弹出层的逻辑
     handleCellPopup() {
@@ -69,7 +50,31 @@ Page({
         visible: e.detail.visible,
       });
     },
+
+    goToHotelDetails() {
+      // 使用 navigateTo 进行页面跳转
+      wx.navigateTo({
+        url: `/pages/index/search/hotel/index?hotel_id=${this.data.item.hotel_id}`
+      });
+    },    
   
+    /**
+   * 生命周期函数--监听页面加载
+   */
+  onLoad(options) {
+    const currentItem = wx.getStorageSync('currentItem');
+    
+    if (currentItem) {
+      this.setData({
+        item:currentItem
+      }, () => {
+        // After setting item, generate swiperList
+        this.updateSwiperList();
+      });
+    }
+
+    console.log('Route Details:',this.data.item);
+  },
 
   /**
    * 生命周期函数--监听页面初次渲染完成

@@ -1,0 +1,34 @@
+<t-navbar fixed="true" t-class-placeholder="t-navbar-placeholder" t-class-content="t-navbar-content">
+  <view slot="left">
+    <t-image
+      t-class="custom-image"
+      src="/pages/index/logo.png"
+      aria-label="导航栏图片"
+    />
+  </view>
+</t-navbar>
+
+<t-swiper
+  height="400"
+  current="{{current}}"
+  autoplay="{{autoplay}}"
+  duration="{{duration}}"
+  interval="{{interval}}"
+  list="{{swiperList}}"
+  navigation="{{ { type: 'dots-bar' } }}"
+/>
+
+<t-cell-group theme="card">
+  <t-cell title="名称：{{hotel.name}}" leftIcon="map-search" hover />
+  <t-cell title="查看酒店介绍" leftIcon="bookmark-double" hover arrow bind:tap="handleCellPopup"/>
+  <t-popup
+    visible="{{visible}}"
+    usingCustomNavbar
+    bind:visible-change="onVisibleChange"
+    placement="bottom"  
+  >
+    <view class="block block--bottom popup-content">
+      233
+    </view>
+  </t-popup>
+</t-cell-group>
