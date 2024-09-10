@@ -9,9 +9,9 @@
   </view>
 </t-navbar>
 <view class="search">
-  <t-search placeholder="请输入您的旅游地点~" shape="round" bind:change="onChangeValue"/>
+  <t-search placeholder="请输入您的旅游地点~" shape="round" bind:change="onChangeValue" bind:clear="onClearValue"/>
 </view>
-<view class="block">
+<view class="block" wx:if="{{!resultList || resultList.length > 0}}">
   <view wx:for="{{resultList}}" wx:key="index">
     <t-cell
       title="{{item.name}}"
@@ -24,4 +24,7 @@
       data-item="{{item}}"
     />
   </view>
+</view>
+<view class="demo-section__content" wx:else>
+    <t-result theme="warning" title="暂未推出此旅游地点" />
 </view>

@@ -18,3 +18,7 @@ page {
   display: block;
   margin-bottom: 32rpx;
 }
+
+.demo-section__content {
+  margin-bottom: 96rpx;
+}

@@ -7,7 +7,6 @@ Page({
    */
   data: {
     value: '',
-    resultList: [],
     border: {
       color: 'var(--td-border-level-1-color, #E7E7E7)',
     },
@@ -29,8 +28,10 @@ Page({
   
           this.setData({
             value,
-            resultList: list.map(item => item)
+            resultList: list.map(item => item),
           });
+
+          console.log("resultList:",this.data.resultList);
         },
         fail: (err) => {
           console.error('请求失败', err);
@@ -42,9 +43,16 @@ Page({
     } else {
       this.setData({
         value: '',
-        resultList: []
+        resultList: undefined
       });
     }
+  },
+
+  onClearValue(){
+    this.setData({
+      value: '',
+      resultList: undefined
+    });
   },
 
   handleItemClick(e) {
