@@ -3,7 +3,7 @@
   <view slot="left">
     <t-image
       t-class="custom-image"
-      src="/pages/index/logo.png"
+      src="/images/logo.png"
       aria-label="导航栏图片"
     />
   </view>

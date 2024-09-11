@@ -1,0 +1,11 @@
+{
+  "navigationStyle": "custom",
+  "component": true,
+  "styleIsolation": "apply-shared",
+  "disableScroll": true,
+  "usingComponents": {
+     "t-navbar": "tdesign-miniprogram/navbar/navbar",
+     "t-image": "tdesign-miniprogram/image/image",
+     "t-pull-down-refresh": "tdesign-miniprogram/pull-down-refresh/pull-down-refresh"
+    }
+}

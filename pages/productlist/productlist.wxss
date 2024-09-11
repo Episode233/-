@@ -1,0 +1,11 @@
+/* pages/productlist/productlist.wxss */
+page {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.custom-image {
+  height: 45px;
+  width: 123px;
+}

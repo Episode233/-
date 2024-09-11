@@ -1,0 +1,21 @@
+{
+  "window": {
+    "navigationStyle": "default",
+    "navigationBarTitleText": "【尊享半岛】",
+    "navigationBarBackgroundColor": "#ffffff"
+  },
+  "component": true,
+  "usingComponents": {
+    "t-swiper": "tdesign-miniprogram/swiper/swiper",
+    "t-swiper-nav": "tdesign-miniprogram/swiper-nav/swiper-nav",
+    "t-dialog": "tdesign-miniprogram/dialog/dialog",
+    "t-button": "tdesign-miniprogram/button/button",
+    "t-image": "tdesign-miniprogram/image/image",
+    "t-tabs": "tdesign-miniprogram/tabs/tabs",
+    "t-tab-panel": "tdesign-miniprogram/tab-panel/tab-panel",
+    "t-swipe-cell": "tdesign-miniprogram/swipe-cell/swipe-cell",
+    "t-cell": "tdesign-miniprogram/cell/cell",
+    "t-icon": "tdesign-miniprogram/icon/icon"
+  }
+}
+

@@ -1,9 +1,21 @@
 {
+  "navigationStyle": "custom",
   "component": true,
   "styleIsolation": "apply-shared",
+  "disableScroll": true,
   "usingComponents": {
     "t-navbar": "tdesign-miniprogram/navbar/navbar",
     "t-image": "tdesign-miniprogram/image/image",
-    "t-search": "tdesign-miniprogram/search/search"
+    "t-search": "tdesign-miniprogram/search/search",
+    "t-swiper": "tdesign-miniprogram/swiper/swiper",
+    "t-swiper-nav": "tdesign-miniprogram/swiper-nav/swiper-nav",
+    "t-pull-down-refresh": "tdesign-miniprogram/pull-down-refresh/pull-down-refresh",
+    "t-skeleton": "tdesign-miniprogram/skeleton/skeleton",
+    "t-back-top": "tdesign-miniprogram/back-top/back-top",
+    "t-cell": "tdesign-miniprogram/cell/cell",
+    "t-icon": "tdesign-miniprogram/icon/icon",
+    "t-switch": "tdesign-miniprogram/switch/switch",
+    "t-tabs": "tdesign-miniprogram/tabs/tabs",
+    "t-tab-panel": "tdesign-miniprogram/tab-panel/tab-panel"
   }
 }

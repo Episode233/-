@@ -1,0 +1,61 @@
+gonggao1 {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+.custom-image {
+  height: 45px;
+  width: 123px;
+}
+.button-example {
+  margin: 32rpx;
+  display: flex;
+  justify-content: space-between;
+}
+.left-text {
+  display: block;
+  margin-left: 4px;
+  font-size: 16px;
+}
+.c1 {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.overlay {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.image1 {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.ts, .text1 {
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  color: black;
+  width: 90%;
+}
+
+.ts {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.text1 {
+  top: 20%;
+  font-size: 16px;
+  line-height: 1.5em;
+  letter-spacing: 1.5px;
+  word-spacing: 4px;
+  text-align: left;
+}

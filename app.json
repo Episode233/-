@@ -3,11 +3,31 @@
     "pages/index/index",
     "pages/index/search/index",
     "pages/index/search/route/index",
-    "pages/index/search/hotel/index"
+    "pages/index/search/hotel/index",
+    "pages/contact/contact",
+    "pages/gonggao1/gonggao1",
+    "pages/zunxiangbandao/zunxiangbandao",
+    "pages/productlist/productlist"
   ],
   "window": {
     "navigationBarTextStyle": "black",
     "navigationStyle": "custom"
+  },
+  "tabBar": {
+    "list": [
+    {
+      "pagePath": "pages/index/index",
+      "text": "首页",
+      "iconPath": "/images/tabs/home.png",
+      "selectedIconPath": "/images/tabs/home-active.png"
+    },
+    {
+      "pagePath": "pages/contact/contact",
+      "text": "我的",
+      "iconPath": "/images/tabs/contact.png",
+      "selectedIconPath": "/images/tabs/contact-active.png"
+    }
+  ]
   },
   "renderer": "skyline",
   "rendererOptions": {

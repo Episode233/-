@@ -1,0 +1,18 @@
+<t-navbar fixed="true" t-class-placeholder="t-navbar-placeholder" t-class-content="t-navbar-content" left-arrow>
+  <text class="left-text" slot="left"></text>
+  <view slot="left" >
+    <t-image
+      t-class="custom-image"
+      src="/images/logo.png"
+      aria-label="导航栏图片"
+    />
+  </view>
+</t-navbar>
+<view class="c1">
+  <view class="overlay">
+    <image class='image1' src="https://r2.episode.icu/lskypro/2024/08/13/66bb5bbe9790d.png" mode="aspectFit"></image>
+    <text class="ts">北京瀚竺科技有限公司</text>
+    <text class="text1">北京瀚竺科技有限公司是一家专注于为在职职工提供身心休养、为退休职工提供健康疗养、为所有社会有需求人士提供个性化定制行程的服务型公司；公司不仅拥有一支专业的金牌客服团队，同时在全国20多个省份拥有近百家长期合作的优质康养基地。公司本着“服务至上、精益求精”的理念，不断推进高品质身心休养服务的技术创新和模式优化，为客户提供个性化的一站式综合身心休养定制服务。</text>
+  </view>
+</view>
+
