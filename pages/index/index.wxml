@@ -29,51 +29,20 @@
   list="{{swiperList}}"
 >
 </t-swiper>
-
-<view class="img-box">
-  <navigator url="/pages/productlist/productlist">
-    <image src="/images/link-03.jpg" mode="widthFix"  style="width: 160px; height: 160px;"></image>
-  </navigator>
+<view class="block" >
+  <view wx:for="{{resultList}}" wx:key="index">
+    <t-cell
+      title="{{item.name}}"
+      description="目的地：{{item.destination}}"
+      align="top"
+      image="{{item.images[0]}}"
+      hover
+      bordered="{{true}}"
+      bind:click="handleItemClick"
+      data-item="{{item}}"
+    />
+  </view>
 </view>
-
-<t-cell
-  title="【翰竺科技】"
-  description="公司简介"
-  align="top"
-  image="https://r2.episode.icu/lskypro/2024/08/28/66cef5b7afc6f.png"
-  hover
-  bordered="{{false}}"
-  url ="/pages/gonggao1/gonggao1"
-/>
-<t-cell
-  title="【尊享半岛】"
-  description="青岛、荣成、威海、蓬莱六日游"
-  align="top"
-  image="https://r2.episode.icu/lskypro/2024/08/26/66cc21e7c9b7f.jpeg"
-  hover
-  bordered="{{false}}"
-  url ="/pages/zunxiangbandao/zunxiangbandao"
-/>
-<t-cell
-  title="【尊享半岛】"
-  description="青岛、荣成、威海、蓬莱六日游"
-  align="top"
-  image="https://r2.episode.icu/lskypro/2024/08/26/66cc21e7c9b7f.jpeg"
-  hover
-  bordered="{{false}}"
-  url ="/pages/zunxiangbandao/zunxiangbandao"
-/>
-<t-cell
-  title="【尊享半岛】"
-  description="青岛、荣成、威海、蓬莱六日游"
-  align="top"
-  image="https://r2.episode.icu/lskypro/2024/08/26/66cc21e7c9b7f.jpeg"
-  hover
-  bordered="{{false}}"
-  url ="/pages/zunxiangbandao/zunxiangbandao"
-/>
-
-
 </t-pull-down-refresh>
 
 
