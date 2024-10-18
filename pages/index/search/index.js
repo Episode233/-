@@ -17,7 +17,7 @@ Page({
     if (value) {
       // 发送GET请求，获取动态数据
       wx.request({
-        url: `https://api.episode.ink/route/?destination=${value}`, // 动态传递 value
+        url: `https://api_hzkj.episode.ink/route/?destination=${value}`, // 动态传递 value
         method: 'GET',
         data: {
           query: value
