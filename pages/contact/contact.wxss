@@ -1,11 +1,48 @@
-/* pages/contact/contact.wxss */
 page {
   height: 100vh;
   display: flex;
   flex-direction: column;
+  position: relative; 
 }
 
 .custom-image {
   height: 45px;
   width: 123px;
 }
+.img {
+  width: 100%;
+  height: 100%;
+}
+
+.block {
+  color: var(--td-text-color-secondary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.block--top,
+.block--bottom {
+  width: 100vw;
+  height: 240px;
+}
+
+.block--left,
+.block--right {
+  width: 280px;
+  height: 100vh;
+}
+
+.block--center {
+  width: 240px;
+  height: 240px;
+}
+
+.wrapper {
+  margin-bottom: 32rpx;
+}
+
+.wrapper:last-child {
+  margin-bottom: 0;
+}
+

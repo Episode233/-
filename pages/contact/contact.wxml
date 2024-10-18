@@ -1,10 +1,3 @@
-<!--pages/contact/contact.wxml-->
-<t-pull-down-refresh 
-  value="{{enable}}"
-  loadingTexts="{{['下拉刷新', '松手刷新', '正在刷新', '刷新完成']}}"
-  bind:refresh="onRefresh"
-  bind:scroll="onScroll">
-</t-pull-down-refresh>
 <t-navbar fixed="true" t-class-placeholder="t-navbar-placeholder" t-class-content="t-navbar-content">
   <view slot="left">
     <t-image
@@ -14,3 +7,33 @@
     />
   </view>
 </t-navbar>
+
+<t-swiper
+  current="{{current}}"
+  autoplay="{{autoplay}}"
+  duration="{{duration}}"
+  interval="{{interval}}"
+  navigation="{{navigation}}"
+  paginationPosition="{{paginationPosition}}"
+  list="{{swiperList}}"
+>
+</t-swiper>
+
+<view class="contact">
+  <!-- 为“联系我们”绑定点击事件 -->
+  <t-cell title="联系我们" hover arrow leftIcon="service" bordered="{{false}}" bind:tap="onContactTap" />
+</view>
+<view class="about">
+  <!-- 为“关于我们”绑定点击事件 -->
+  <t-cell title="关于我们" hover arrow leftIcon="internet" bordered="{{false}}" bind:tap="onAboutTap" />
+</view>
+
+<!-- 弹出层组件，使用 cur.value 和 cur.text 控制 -->
+<t-popup
+  visible="{{visible}}"
+  usingCustomNavbar
+  bind:visible-change="onVisibleChange"
+  placement="{{cur.value || 'center'}}"
+>
+  <view class="block block--{{cur.value}}">{{cur.text}}</view>
+</t-popup>
