@@ -47,7 +47,7 @@ Page({
   },
   onLoad(options){
     wx.request({
-      url: `https://api_hzkj.episode.ink/route/?destination=`, // 动态传递 value
+      url: `https://api-hzkj.episode.ink/route/?destination=`, // 动态传递 value
       method: 'GET',
       success: (res) => {
         // 假设返回的数据格式为 { data: ['tdesign-vue', 'tdesign-react', ...] }

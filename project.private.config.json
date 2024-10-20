@@ -3,7 +3,7 @@
   "projectname": "%E7%80%9A%E7%AB%BA%E7%A7%91%E6%8A%80",
   "setting": {
     "compileHotReLoad": true,
-    "urlCheck": false,
+    "urlCheck": true,
     "skylineRenderEnable": false
   },
   "libVersion": "3.5.5"

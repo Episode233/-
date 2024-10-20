@@ -41,10 +41,11 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad(options) {
-    const hotelId = options.hotel_id; // 获取传递过来的 hotel_id 参数
+    if(options.hotel_id){
+      const hotelId = options.hotel_id; // 获取传递过来的 hotel_id 参数
     
     wx.request({
-      url: `https://api_hzkj.episode.ink/hotel?id=${hotelId}`, // 使用 hotelId 作为参数
+      url: `https://api-hzkj.episode.ink/hotel?id=${hotelId}`, // 使用 hotelId 作为参数
       method: 'GET',
       success: (res) => {
         if (res.statusCode === 200) {
@@ -66,6 +67,20 @@ Page({
         console.error('Request failed', err);
       }
     });
+    }else{
+      const currentItem = wx.getStorageSync('currentHotel');
+    
+    if (currentItem) {
+      console.log("log",currentItem)
+      this.setData({
+        hotel: currentItem,
+        swiperList:currentItem.images
+      });
+    }
+
+    console.log('Hotel Details:',this.data.item);
+    }
+    
   },
 
   /**
