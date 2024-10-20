@@ -25,7 +25,7 @@
     visible="{{visible}}"
     usingCustomNavbar
     bind:visible-change="onVisibleChange"
-    placement="bottom"  
+    placement="bottom"
   >
     <view class="block block--bottom popup-content">
       {{hotel.description}}

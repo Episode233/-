@@ -9,7 +9,6 @@
 }
 
 .block--bottom {
-  width: 100vw;
   height: 400px;
 }
 
