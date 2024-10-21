@@ -7,7 +7,8 @@
     "pages/contact/contact",
     "pages/gonggao1/gonggao1",
     "pages/productlist/productlist",
-    "pages/hotel/index"
+    "pages/hotel/index",
+    "pages/hotel/search/index"
   ],
   "window": {
     "navigationBarTextStyle": "black",

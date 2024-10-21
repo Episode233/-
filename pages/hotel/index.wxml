@@ -16,6 +16,9 @@
     />
   </view>
 </t-navbar>
+<view class="search" bind:tap="navToSearchPage">
+  <t-search placeholder="请输入酒店名称~" shape="round" disabled/>
+</view>
 <t-swiper
   current="{{current}}"
   autoplay="{{autoplay}}"

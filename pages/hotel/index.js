@@ -11,6 +11,10 @@ const swiperList = [
 Page({
   behaviors: [themeChangeBehavior],
 
+  navToSearchPage() {
+    wx.navigateTo({ url: '/pages/hotel/search/index' });
+  },
+
   /**
    * 页面的初始数据
    */
