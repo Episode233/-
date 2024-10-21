@@ -31,7 +31,7 @@
 </t-swiper>
 <view class="block" >
   <view wx:for="{{resultList}}" wx:key="index">
-    <t-badge count="{{index}}" offset="{{ [-350,-70] }}" class="wrapper" shape="bubble">
+    <t-badge count="{{index+1}}" offset="{{ [-350,20] }}" class="wrapper" shape="bubble">
       <t-cell 
       title="{{item.name}}"
       description="目的地：{{item.destination}}"
