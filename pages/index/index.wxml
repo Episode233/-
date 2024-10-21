@@ -31,6 +31,7 @@
 </t-swiper>
 <view class="block" >
   <view wx:for="{{resultList}}" wx:key="index">
+    <t-badge count="{{index}}" offset="{{ [-350,-70] }}" class="wrapper" shape="bubble">
       <t-cell 
       title="{{item.name}}"
       description="目的地：{{item.destination}}"
@@ -41,6 +42,7 @@
       bind:click="handleItemClick"
       data-item="{{item}}"
     />
+    </t-badge>
   </view>
 </view>
 </t-pull-down-refresh>
