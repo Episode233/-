@@ -31,7 +31,7 @@
 </t-swiper>
 <view class="block" >
   <view wx:for="{{resultList}}" wx:key="index">
-    <t-cell
+      <t-cell 
       title="{{item.name}}"
       description="目的地：{{item.destination}}"
       align="top"
