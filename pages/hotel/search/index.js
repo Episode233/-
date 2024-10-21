@@ -17,7 +17,7 @@ Page({
     if (value) {
       // 发送GET请求，获取动态数据
       wx.request({
-        url: `https://api-hzkj.episode.ink/hotel/search/?name=${value}`, // 动态传递 value
+        url: `https://api-hzkj.episode.ink/hotel/search/?province=${value}`, // 动态传递 value
         method: 'GET',
         data: {
           query: value
@@ -65,6 +65,17 @@ Page({
     wx.navigateTo({
       url: '/pages/index/search/hotel/index'
     });
+  },
+
+  onRefresh() {
+    this.setData({ enable: true });
+    setTimeout(() => {
+      this.setData({ enable: false });
+    }, 0);
+  },
+  onScroll(e) {
+    const { scrollTop } = e.detail;
+    this.setData({ scrollTop });
   },
 
   /**

@@ -93,7 +93,7 @@ Page({
       this.setData({ enable: true });
       setTimeout(() => {
         this.setData({ enable: false });
-      }, 1500);
+      }, 0);
     },
     onScroll(e) {
       const { scrollTop } = e.detail;

@@ -9,8 +9,14 @@
   </view>
 </t-navbar>
 <view class="search">
-  <t-search placeholder="请输入酒店名称~" shape="round" bind:change="onChangeValue" bind:clear="onClearValue"/>
+  <t-search placeholder="请输入酒店所在的省份~" shape="round" bind:change="onChangeValue" bind:clear="onClearValue"/>
 </view>
+<t-pull-down-refresh
+  value="{{enable}}"
+  loadingTexts="{{['下拉刷新', '松手刷新', '正在刷新', '刷新完成']}}"
+  bind:refresh="onRefresh"
+  bind:scroll="onScroll"
+>
 <view class="block" wx:if="{{!resultList || resultList.length > 0}}">
   <view wx:for="{{resultList}}" wx:key="index">
     <t-cell
@@ -26,5 +32,6 @@
   </view>
 </view>
 <view class="demo-section__content" wx:else>
-    <t-result theme="warning" title="暂未推出此酒店" />
+    <t-result theme="warning" title="该省份暂未推出酒店" />
 </view>
+</t-pull-down-refresh>

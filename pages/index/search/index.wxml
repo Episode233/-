@@ -11,6 +11,12 @@
 <view class="search">
   <t-search placeholder="请输入您的旅游地点~" shape="round" bind:change="onChangeValue" bind:clear="onClearValue"/>
 </view>
+<t-pull-down-refresh
+  value="{{enable}}"
+  loadingTexts="{{['下拉刷新', '松手刷新', '正在刷新', '刷新完成']}}"
+  bind:refresh="onRefresh"
+  bind:scroll="onScroll"
+>
 <view class="block" wx:if="{{!resultList || resultList.length > 0}}">
   <view wx:for="{{resultList}}" wx:key="index">
     <t-cell
@@ -28,3 +34,4 @@
 <view class="demo-section__content" wx:else>
     <t-result theme="warning" title="暂未推出此旅游地点" />
 </view>
+</t-pull-down-refresh>

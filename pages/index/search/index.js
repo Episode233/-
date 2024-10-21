@@ -67,6 +67,17 @@ Page({
     });
   },
 
+  onRefresh() {
+    this.setData({ enable: true });
+    setTimeout(() => {
+      this.setData({ enable: false });
+    }, 0);
+  },
+  onScroll(e) {
+    const { scrollTop } = e.detail;
+    this.setData({ scrollTop });
+  },
+
   /**
    * 生命周期函数--监听页面加载
    */
