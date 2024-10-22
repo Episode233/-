@@ -99,4 +99,20 @@ Page({
       const { scrollTop } = e.detail;
       this.setData({ scrollTop });
     },
+
+    clickYXLC(){
+      wx.redirectTo({
+        url: '/pages/index/index'
+      });
+    },
+    clickXQLJ(){
+      wx.redirectTo({
+        url: '/pages/hotel/index'
+      });
+    },
+    clickZTLY(){
+      wx.redirectTo({
+        url: '/pages/index/index'
+      });
+    },
 })

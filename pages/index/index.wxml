@@ -29,6 +29,17 @@
   list="{{swiperList}}"
 >
 </t-swiper>
+<view class="feature">
+  <view class="feature-item" bindtap="clickYXLC">
+    <image class="feature-image" src="/images/index/yxlc.jpg"/>
+  </view>
+  <view class="feature-item" bindtap="clickXQLJ">
+    <image class="feature-image" src="/images/index/xqlj.jpg"/>
+  </view>
+  <view class="feature-item" bindtap="clickZTLY">
+    <image class="feature-image" src="/images/index/ztly.jpg"/>
+  </view>
+</view>
 <view class="block" >
   <view wx:for="{{resultList}}" wx:key="index">
     <t-badge count="{{index+1}}" offset="{{ [-350,20] }}" class="wrapper" shape="bubble">
