@@ -101,17 +101,17 @@ Page({
     },
 
     clickYXLC(){
-      wx.redirectTo({
+      wx.switchTab({
         url: '/pages/index/index'
       });
     },
     clickXQLJ(){
-      wx.redirectTo({
+      wx.switchTab({
         url: '/pages/hotel/index'
       });
     },
     clickZTLY(){
-      wx.redirectTo({
+      wx.switchTab({
         url: '/pages/index/index'
       });
     },
