@@ -1,4 +1,4 @@
-// index.js
+// pages/home/index.js
 import themeChangeBehavior from 'tdesign-miniprogram/mixins/theme-change';
 const swiperList = [
   `https://r2.episode.moe/lskypro/2024/10/18/67121614148bd.png`,
@@ -51,7 +51,7 @@ Page({
       method: 'GET',
       success: (res) => {
         // 假设返回的数据格式为 { data: ['tdesign-vue', 'tdesign-react', ...] }
-        const list = res.data; 
+        const list = res.data.slice(0, 10);
 
         this.setData({
           resultList: list.map(item => item),
@@ -100,4 +100,19 @@ Page({
       this.setData({ scrollTop });
     },
 
+    clickYXLC(){
+      wx.switchTab({
+        url: '/pages/index/index'
+      });
+    },
+    clickXQLJ(){
+      wx.switchTab({
+        url: '/pages/hotel/index'
+      });
+    },
+    clickZTLY(){
+      wx.switchTab({
+        url: '/pages/home/index'
+      });
+    },
 })

@@ -15,6 +15,7 @@
     "t-icon": "tdesign-miniprogram/icon/icon",
     "t-switch": "tdesign-miniprogram/switch/switch",
     "t-tabs": "tdesign-miniprogram/tabs/tabs",
+    "t-badge": "tdesign-miniprogram/badge/badge",
     "t-col": "tdesign-miniprogram/col/col",
     "t-row": "tdesign-miniprogram/row/row",
     "t-tab-panel": "tdesign-miniprogram/tab-panel/tab-panel"
