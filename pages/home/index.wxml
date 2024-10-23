@@ -42,7 +42,9 @@
 </view>
 <view class="block" >
   <view wx:for="{{resultList}}" wx:key="index">
-    <t-badge count="{{index+1}}" offset="{{ [-350,20] }}" class="wrapper" shape="bubble">
+    <view wx:if="{{index < 3}}" class="crown">
+      <image src="{{'/images/index/crown'+(index+1)+'.svg'}}" mode="aspectFit" />
+    </view>
       <t-cell 
       title="{{item.name}}"
       description="目的地：{{item.destination}}"
@@ -52,9 +54,8 @@
       bordered="{{true}}"
       bind:click="handleItemClick"
       data-item="{{item}}"
-    />
-    </t-badge>
-  </view>
+      />
+    </view>
 </view>
 </t-pull-down-refresh>
 

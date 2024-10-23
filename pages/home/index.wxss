@@ -88,9 +88,17 @@ page {
   align-items: center;
   }
 
-.wrapper{
-  width: 100%;
-}
+  .crown {
+    position: absolute; /* 使其定位在 t-cell 上 */
+    top: 0; /* 根据需要调整 */
+    left: 100rpx; /* 根据需要调整 */
+    z-index: 10; /* 确保 皇冠 在 t-cell 之上 */
+  }
+
+  .crown image {
+    width: 50rpx; /* 根据需求修改 */
+    height: 50rpx; /* 根据需求修改 */
+  }
 
 .feature {
   margin-top: 30rpx;
