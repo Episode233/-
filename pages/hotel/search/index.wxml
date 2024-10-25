@@ -28,6 +28,7 @@
       bordered="{{true}}"
       bind:click="handleItemClick"
       data-item="{{item}}"
+      class="content"
     />
   </view>
 </view>

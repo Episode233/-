@@ -91,3 +91,10 @@ page {
 .wrapper{
   width: 100%;
 }
+
+.content{
+  --td-cell-height:200rpx;
+  --td-cell-image-height:128rpx;
+  --td-cell-image-width:128rpx;
+  --td-cell-line-height:66rpx;
+}
