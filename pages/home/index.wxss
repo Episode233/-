@@ -90,8 +90,8 @@ page {
 
   .crown {
     position: absolute; /* 使其定位在 t-cell 上 */
-    top: 0; /* 根据需要调整 */
-    left: 100rpx; /* 根据需要调整 */
+    top: 0rpx; /* 根据需要调整 */
+    left: 136rpx; /* 根据需要调整 */
     z-index: 10; /* 确保 皇冠 在 t-cell 之上 */
   }
 
@@ -118,4 +118,11 @@ page {
   width: 100%;
   height: 100%;
   border-radius: 15rpx;
+}
+
+.content{
+  --td-cell-height:200rpx;
+  --td-cell-image-height:128rpx;
+  --td-cell-image-width:128rpx;
+  --td-cell-line-height:66rpx;
 }
