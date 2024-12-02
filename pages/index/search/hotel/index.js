@@ -45,7 +45,7 @@ Page({
       const hotelId = options.hotel_id; // 获取传递过来的 hotel_id 参数
     
     wx.request({
-      url: `https://api-hzkj.episode.ink/hotel?id=${hotelId}`, // 使用 hotelId 作为参数
+      url: `https://api-hzkj.episode.ink/hotel/?id=${hotelId}`, // 使用 hotelId 作为参数
       method: 'GET',
       success: (res) => {
         if (res.statusCode === 200) {

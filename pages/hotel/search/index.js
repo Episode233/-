@@ -6,6 +6,7 @@ Page({
    * 页面的初始数据
    */
   data: {
+    errlog:"",
     value: '',
     border: {
       color: 'var(--td-border-level-1-color, #E7E7E7)',
@@ -17,7 +18,7 @@ Page({
     if (value) {
       // 发送GET请求，获取动态数据
       wx.request({
-        url: `https://api-hzkj.episode.ink/hotel/search/?province=${value}`, // 动态传递 value
+        url: `https://api-hzkj.episode.ink/hotel/search?province=${value}`, // 动态传递 value
         method: 'GET',
         data: {
           query: value
@@ -28,7 +29,7 @@ Page({
   
           this.setData({
             value,
-            resultList: list.map(item => item),
+            resultList: list.map(item => item)
           });
 
           console.log("resultList:",this.data.resultList);
@@ -36,6 +37,7 @@ Page({
         fail: (err) => {
           console.error('请求失败', err);
           this.setData({
+            errlog:JSON.stringify(err, null, 2),
             resultList: [] // 请求失败时清空列表
           });
         }

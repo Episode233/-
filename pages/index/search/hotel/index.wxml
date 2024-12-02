@@ -17,7 +17,6 @@
   list="{{swiperList}}"
   navigation="{{ { type: 'dots-bar' } }}"
 />
-
 <t-cell-group theme="card">
   <t-cell title="名称：{{hotel.name}}" leftIcon="map-search" hover />
   <t-cell title="查看酒店介绍" leftIcon="bookmark-double" hover arrow bind:tap="handleCellPopup"/>
