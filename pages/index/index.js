@@ -100,4 +100,19 @@ Page({
       this.setData({ scrollTop });
     },
 
+    onShareAppMessage() {
+      return {
+        title: '瀚竺科技',
+        path: '/pages/index/index',
+        imageUrl: ''
+      }
+    },
+  
+    onShareTimeline() {
+      return {
+        title: '瀚竺科技',
+        imageUrl: ''
+      }
+    }
+
 })

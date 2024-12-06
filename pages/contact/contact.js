@@ -47,4 +47,19 @@ Page({
       visible: e.detail.visible,
     });
   },
+
+  onShareAppMessage() {
+    return {
+      title: '瀚竺科技',
+      path: '/pages/contact/contact',
+      imageUrl: ''
+    }
+  },
+
+  onShareTimeline() {
+    return {
+      title: '瀚竺科技',
+      imageUrl: ''
+    }
+  }
 });

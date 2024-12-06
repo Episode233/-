@@ -115,4 +115,19 @@ Page({
         url: '/pages/home/index'
       });
     },
+
+    onShareAppMessage() {
+      return {
+        title: '瀚竺科技',
+        path: 'pages/home/index',
+        imageUrl: ''
+      }
+    },
+  
+    onShareTimeline() {
+      return {
+        title: '瀚竺科技',
+        imageUrl: ''
+      }
+    }
 })

@@ -123,6 +123,17 @@ Page({
    * 用户点击右上角分享
    */
   onShareAppMessage() {
+    return {
+      title: '瀚竺科技',
+      path: '/pages/hotel/index',
+      imageUrl: ''
+    }
+  },
 
+  onShareTimeline() {
+    return {
+      title: '瀚竺科技',
+      imageUrl: ''
+    }
   }
 })
